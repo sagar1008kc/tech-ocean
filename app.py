@@ -1,4 +1,3 @@
-from tkinter import Image
 import streamlit as st
 from services.ai_chat import chat_with_llm
 import yfinance as yf
