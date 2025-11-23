@@ -1,9 +1,8 @@
+from tkinter import Image
 import streamlit as st
 from services.ai_chat import chat_with_llm
 import yfinance as yf
 import matplotlib.pyplot as plt
-
-st.set_page_config(page_title="Python Data App", layout="wide")
 
 st.markdown(
     """
@@ -33,8 +32,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.title("📊 Python Data App")
-
+st.title("Tech Ocean")
 tab1, tab2, tab3 = st.tabs(["👋 Welcome", "📈 Stock Explorer", "💬 Chatboot"])
 
 # --- TAB 1: Simple UI ---
