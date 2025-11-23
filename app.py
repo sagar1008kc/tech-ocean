@@ -50,3 +50,11 @@ with tab2:
                 ax.set_xlabel("Date")
                 ax.set_ylabel("Price")
                 st.pyplot(fig)
+st.markdown(
+    """
+    <div style="text-align: center; margin-top: 50px; color: #888;">
+        © 2025 Dr. SK — All Rights Reserved
+    </div>
+    """,
+    unsafe_allow_html=True
+)
