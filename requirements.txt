@@ -1,4 +1,14 @@
-streamlit
-yfinance
-pandas
-matplotlib
+streamlit>=1.30
+yfinance>=0.2.36
+matplotlib>=3.8
+pandas>=2.2
+numpy>=1.26
+
+# If your chat_with_llm uses Ollama local model:
+ollama>=0.1.8
+
+# If your ai_chat module uses requests to call APIs:
+requests>=2.31
+
+# Optional - helps avoid SSL issues on macOS:
+certifi>=2024.2.2
