@@ -80,7 +80,7 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-st.set_page_config(page_title="AI Coach 2.0", layout="wide")
+st.set_page_config(page_title="Tech Ocean 2.0", layout="wide")
 st.title("AI Coach 2.0")
 st.caption("A focused AI learning workspace with guided practice and activity management.")
 
@@ -491,7 +491,7 @@ with tab6:
     st.write("### AI Mock Interview Generator")
     interview_track = st.selectbox(
         "Track",
-        ["Python Developer", "Data Analyst", "Machine Learning Engineer", "Backend Engineer"],
+        ["AI Engineer", "Python Developer", "Data Analyst", "Machine Learning Engineer", "Backend Engineer"],
     )
     interview_difficulty = st.select_slider(
         "Interview difficulty",
@@ -618,7 +618,7 @@ with tab6:
 st.markdown(
     """
     <div style="text-align: center; margin-top: 50px; color: #888;">
-        © 2026 AI Coach 2.0 - SKcreation.org
+        © 2026 Tech Ocean 2.0 - SKcreation.org
     </div>
     """,
     unsafe_allow_html=True
