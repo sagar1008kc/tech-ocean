@@ -1,0 +1,22 @@
+{
+  "profile": {
+    "goal": "",
+    "level": "intermediate",
+    "pace_hours_per_week": 5,
+    "weak_topics": []
+  },
+  "quiz_history": [],
+  "milestones": [],
+  "engagement": {
+    "xp": 15,
+    "streak_days": 1,
+    "last_active_date": "2026-04-23"
+  },
+  "session_log": [
+    {
+      "event_type": "interview_simulation",
+      "detail": "Generated Medium set for Python Developer",
+      "timestamp": "2026-04-24T02:35:18"
+    }
+  ]
+}

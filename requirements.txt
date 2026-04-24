@@ -1,8 +1,9 @@
 streamlit>=1.30
-yfinance>=0.2.36
 matplotlib>=3.8
 pandas>=2.2
 numpy>=1.26
+plotly>=5.22
+scikit-learn>=1.5
 
 # If your chat_with_llm uses Ollama local model:
 ollama>=0.1.8

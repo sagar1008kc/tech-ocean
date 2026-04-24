@@ -1,78 +1,89 @@
-📊 Tech Ocean — Python Data + Local AI Chat App
+# LearnIQ AI Learning Coach
 
-A simple multi-tab Streamlit application featuring:
+A local-first Streamlit platform for students and professionals that combines:
+- AI tutoring modes (mentor, quiz, practice, review, planner)
+- Context-aware learning from uploaded files (RAG-lite)
+- Personalized profile and progress tracking
+- Stock/data exploration utilities already present in the original app
 
-👋 A friendly welcome UI
+## Key Features
+- **AI Learning Studio**
+  - Explain Like Mentor
+  - Quiz Me (JSON structured quiz output)
+  - Practice Problems
+  - Project Review
+  - Study Plan Builder (JSON weekly plan)
+- **RAG-lite context retrieval**
+  - Upload `.txt`, `.md`, `.csv`
+  - Local chunk indexing and retrieval
+  - Source-aware context injection and citations
+- **Personalization**
+  - Learner profile (goal, level, pace, weak topics)
+  - Quiz history trend
+  - Milestone tracking from generated study plans
+- **Data tools**
+  - Premium AI Lab with mock interview generation and answer scoring
+  - Hot positions interview collection (`AI Engineer`, `Fullstack Engineer`, etc.)
+  - Persistent interview database using SQLite (`data/interview_bank.db`)
+  - Downloadable interview collections and executive report exports
 
-📈 Stock Explorer using yfinance
+## Tech Stack
+- Python 3.13
+- Streamlit
+- Ollama (local model inference)
+- Pandas, NumPy
+- Matplotlib
+- yfinance
+- requests
+- SQLite (built-in, no external dependency)
 
-🤖 Local AI Chatbot powered by Ollama (llama3.1)
-
-🎨 Clean UI styling + session-based chat history
-
-🚀 Live Features
-
-Stock Explorer — fetch historical stock data, auto-adjust, visualize using Matplotlib.
-
-Local AI Chatbot — uses Ollama running locally (llama3.1) for offline AI responses.
-
-Beautiful UI — custom CSS + Streamlit chat components.
-
-🧰 Tech Stack
-
-Python 3.13
-
-Streamlit
-
-Ollama (local model inference)
-
-yfinance
-
-matplotlib
-
-requests
-
-📦 Installation
+## Installation
+```bash
 git clone https://github.com/<your-username>/<repo-name>.git
 cd <repo-name>
 pip install -r requirements.txt
+```
 
-▶️ Run the App
-
-Start Ollama first:
-
+## Run
+Start Ollama:
+```bash
 ollama serve
-# and ensure model is pulled
 ollama pull llama3.1
+```
 
-
-Then run Streamlit:
-
+Run the app:
+```bash
 streamlit run app.py
+```
 
-📁 Project Structure
+## Testing
+```bash
+python -m unittest discover -s tests
+```
+
+## Project Structure
+```text
 .
-├── app.py                  # Main Streamlit UI
+├── app.py
 ├── services/
-│   └── ai_chat.py          # Ollama chat integration
+│   ├── ai_chat.py
+│   ├── llm_client.py
+│   ├── prompts.py
+│   ├── learning_orchestrator.py
+│   ├── rag_store.py
+│   └── progress_store.py
+├── tests/
+│   ├── test_learning_orchestrator.py
+│   └── test_progress_store.py
 ├── requirements.txt
 └── README.md
+```
 
-🔗 Useful Links
+## Troubleshooting
+- **Cannot connect to Ollama**: verify `ollama serve` is running.
+- **Model not found**: run `ollama pull <model-name>` and use that model in the UI.
+- **Empty RAG results**: upload files first and use prompts that reference uploaded content.
+- **Interview collection missing**: open Premium AI Lab once to auto-seed hot role questions.
 
-Ollama Chat API Docs — https://github.com/ollama/ollama/blob/main/docs/api.md
-
-Streamlit Documentation — https://docs.streamlit.io
-
-yfinance Documentation — https://pypi.org/project/yfinance/
-
-Matplotlib — https://matplotlib.org/stable/contents.html
-
-📝 License
-
-MIT — free to use, modify, and share.
-
-✨ Author
-
-Dr. SK (Tech Ocean)
-Sharing Python, AI, DSA & Tech learning:
+## License
+MIT
