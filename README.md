@@ -1,4 +1,4 @@
-# LearnIQ AI Learning Coach
+# AI Coach 2.0
 
 A local-first Streamlit platform for students and professionals that combines:
 - AI tutoring modes (mentor, quiz, practice, review, planner)
